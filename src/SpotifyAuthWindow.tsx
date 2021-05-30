@@ -5,7 +5,8 @@ export default class SpotifyAuthWindow extends Component {
 
     private externalWindow: Window | null;
     private containerEl: HTMLDivElement;
-    private SCOPE_LIST = "streaming user-read-birthdate user-read-email user-read-private user-read-currently-playing";
+    private SCOPE_LIST = "streaming user-read-email user-read-private";
+    // private SCOPE_LIST = "streaming user-read-birthdate user-read-email user-read-private user-read-currently-playing";
 
     constructor(props: any) {
         super(props);
@@ -16,7 +17,7 @@ export default class SpotifyAuthWindow extends Component {
     public componentDidMount(): void {
 
         this.externalWindow = window.open("https://accounts.spotify.com/authorize?" +
-            "client_id=" +
+            "client_id=" + "0c8ac8d635fd4235a39b106e59c72c98" + 
             "&response_type=token" +
             "&redirect_uri=" + window.location.origin +
             "&show_dialog=true" +

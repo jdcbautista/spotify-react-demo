@@ -2,7 +2,12 @@ import React, {Component} from 'react';
 import SpotifyPlayerContainer from "./SpotifyPlayerContainer";
 
 
-class App extends Component {
+class App extends Component <any, any>{
+    
+    constructor(props: any) {
+        super(props);
+        
+    }
 
     render() {
         return (<SpotifyPlayerContainer
